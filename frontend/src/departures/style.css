@@ -1,0 +1,9 @@
+.table td {
+    border-top: 1px #607890 solid;
+    border-bottom: 1px #607890 solid;
+    vertical-align: middle;
+}
+
+.not-today {
+    color: #a9a9a9;
+}

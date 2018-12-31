@@ -1,0 +1,26 @@
+
+.rbc-time-view {
+    background-color: aliceblue;
+    color: #1f567c;
+}
+
+.rbc-event-label {
+    display: none;
+}
+
+.rbc-event-content {
+    font-size: 11px;
+}
+
+.rbc-time-slot {
+    border-top: none;
+}
+
+.rbc-header {
+    text-transform: capitalize;
+}
+
+.rbc-today {
+    background-color: #d9edfb;
+}
+

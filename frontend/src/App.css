@@ -1,0 +1,21 @@
+.no-pad {
+  padding: 0 0;
+}
+
+body {
+  background-color: #1f567c;
+  color: azure;
+}
+
+.App .row {
+  padding: 12px 0;
+  border-bottom: 3px #4f6c80 solid;
+}
+
+.current-time {
+  font-size: 6rem;
+}
+
+.current-date {
+  font-size: 3rem;
+}
