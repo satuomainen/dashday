@@ -41,6 +41,22 @@ running, though, check out the backend configuration instructions in
 System integration
 ---
 
+Select a Raspbian version that automatically boots to X. Then fix the
+configuration so that the screen does not go blank after a while. Edit the 
+configuration: `sudo nano /etc/lightdm/lightdm.conf`
+
+```
+[Seat:*]
+xserver-command=X -s 0 dpms
+```
+
+Automatic screen blanking might also be a desirable feature to reduce light
+pollution when the information is not needed. The dashboard is meant to be
+always on and without means for human input so turning the display back on
+again might be a problem. Then you could maybe add special a HID device that
+wakes the display up (a one button keyboard would do the trick or even an
+old wireless mouse HW that is modified to a single button form factor).
+
 Make the app start when the OS boots. To achieve this, create the file
 `/etc/systemd/system/dashday.service` as:
 
