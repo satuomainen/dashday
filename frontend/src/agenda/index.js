@@ -10,7 +10,7 @@ import Api from "../api";
 
 import "./style.css";
 
-const SIX_HOURS_IN_MILLIS = 6 * 60 * 60 * 1000;
+const TWO_HOURS_IN_MILLIS = 2 * 60 * 60 * 1000;
 
 class Agenda extends Component {
 
@@ -26,7 +26,7 @@ class Agenda extends Component {
 
   componentDidMount() {
     this.refreshAgenda();
-    this.props.setInterval(this.refreshAgenda, SIX_HOURS_IN_MILLIS);
+    this.props.setInterval(this.refreshAgenda, TWO_HOURS_IN_MILLIS);
   }
 
   refreshAgenda() {
@@ -45,6 +45,13 @@ class Agenda extends Component {
   }
 
   getCurrentWeekStartDate(now) {
+    const isoWeekday = moment(now).isoWeekday();
+    const isWeekend = isoWeekday === 6 || isoWeekday === 7;
+
+    if (isWeekend) {
+      now.add(7, "days"); // Mutates now
+    }
+
     return moment(now).startOf("isoWeek").startOf("day");
   }
 
