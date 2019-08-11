@@ -1,6 +1,8 @@
 Dashday - A hall dashboard for kids
 ===
 
+![alt text](./dashday.png "Screen shot")
+
 The Dashday dashboard shows 
 
 * the current time and date, 
